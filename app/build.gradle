@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'war' // If you're deploying a WAR file
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+sourceCompatibility = 20
+targetCompatibility = 20
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Servlet API for web app
+    implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+    
+    // JUnit for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+war {
+    // Optional: configure the WAR task
+    archiveFileName = 'mywebapp.war'
+}

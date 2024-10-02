@@ -1,0 +1,1 @@
+web: JAVA_HOME=/usr/lib/jvm/java-20-openjdk-amd64 java -jar build/libs/mywebapp.war
